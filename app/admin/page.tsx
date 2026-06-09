@@ -12,11 +12,12 @@ export const revalidate = 0;
 
 async function getConsultations(): Promise<Consultation[]> {
   const sql = getDb();
-  return await sql`
+  const rows = await sql`
     SELECT id, name, email, message, created_at
     FROM consultations
     ORDER BY created_at DESC
   `;
+  return rows as Consultation[];
 }
 
 function formatDate(iso: string) {

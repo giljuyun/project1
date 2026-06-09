@@ -1,3 +1,5 @@
+import ConsultationForm from "@/components/ConsultationForm";
+
 export default function Home() {
   const services = [
     {
@@ -177,51 +179,41 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── CTA (Contact) ── */}
+        {/* ── Consultation Form ── */}
         <section
           id="contact"
           className="py-20 px-6"
           style={{ backgroundColor: "var(--ikea-surface-gray)" }}
         >
-          <div
-            className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-8 p-10"
-            style={{
-              backgroundColor: "var(--ikea-blue)",
-              borderRadius: "16px",
-            }}
-          >
-            <div>
-              {/* Section title in white */}
-              <h2
-                className="font-bold mb-2"
-                style={{ fontSize: "30px", color: "var(--ikea-white)" }}
+          <div className="max-w-3xl mx-auto">
+            {/* Header */}
+            <div className="mb-10">
+              <span
+                className="inline-block mb-4 text-xs font-bold uppercase tracking-widest px-3 py-1"
+                style={{ backgroundColor: "var(--ikea-yellow)", color: "var(--ikea-ink)", borderRadius: "4px" }}
               >
-                함께 일하고 싶으신가요?
+                Consultation
+              </span>
+              <h2 className="font-bold mb-2" style={{ fontSize: "30px", color: "var(--ikea-ink)" }}>
+                상담 신청
               </h2>
-              <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.7)" }}>
+              <p style={{ fontSize: "16px", color: "var(--ikea-muted)" }}>
                 궁금한 점이 있거나 협업을 원하신다면 언제든지 연락해 주세요.
               </p>
+              <div style={{ height: "2px", backgroundColor: "var(--ikea-yellow)", width: "48px", marginTop: "20px" }} />
             </div>
 
-            {/* IKEA Primary Button – black, pill shape, 44px+ height */}
-            <a
-              href="mailto:contact@alphateam.com"
-              className="flex-shrink-0 flex items-center gap-2 font-bold transition-opacity hover:opacity-90 active:scale-95"
+            {/* Form card */}
+            <div
+              className="ikea-card p-8 sm:p-10"
               style={{
-                backgroundColor: "var(--ikea-ink)",
-                color: "var(--ikea-white)",
-                borderRadius: "999px",
-                padding: "14px 32px",
-                fontSize: "16px",
-                minHeight: "44px",
-                textDecoration: "none",
+                backgroundColor: "var(--ikea-white)",
+                borderRadius: "16px",
+                border: "1px solid var(--ikea-border)",
               }}
             >
-              문의하기
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
+              <ConsultationForm />
+            </div>
           </div>
         </section>
 

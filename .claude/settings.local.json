@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"C:\\\\Users\\\\gilju\\\\dev\\\\project1\"; Start-Process powershell -ArgumentList '-NoExit', '-Command', 'npm run dev' -WindowStyle Normal)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "PowerShell(Start-Process \"http://localhost:3000\")",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(cd \"C:\\\\Users\\\\gilju\\\\dev\\\\project1\"; Start-Process -FilePath \"powershell.exe\" -ArgumentList \"-NoExit -Command `\"npm run dev`\"\" -WorkingDirectory \"C:\\\\Users\\\\gilju\\\\dev\\\\project1\")",
+      "Bash(gh api *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "PowerShell(vercel *)",
+      "PowerShell(gh auth *)",
+      "PowerShell(winget install *)",
+      "PowerShell(gh *)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(git *)",
+      "PowerShell(Start-Process \"https://vercel.com/giljuyun1/project1/settings/git\")",
+      "PowerShell(Start-Process \"https://vercel.com/giljuyun1/project1/stores\")",
+      "PowerShell(New-Item *)",
+      "Bash(curl *)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000/api/init-db\" -UseBasicParsing 2>&1 | Select-Object StatusCode, Content)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(Start-Sleep -Seconds 8; Invoke-WebRequest -Uri \"http://localhost:3000/api/init-db\" -UseBasicParsing -ErrorAction SilentlyContinue | Select-Object StatusCode, Content)",
+      "PowerShell(Start-Sleep -Seconds 6; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/api/init-db\" -UseBasicParsing -ErrorAction Stop; $r.Content } catch { $_.Exception.Response.StatusCode; $_.ErrorDetails.Message })",
+      "PowerShell(Start-Sleep -Seconds 5; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/api/init-db\" -UseBasicParsing -ErrorAction Stop; $r.Content } catch { $_.ErrorDetails.Message })",
+      "PowerShell(Start-Sleep -Seconds 3; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/api/init-db\" -UseBasicParsing -ErrorAction Stop; Write-Host \"Status: $\\($r.StatusCode\\)\"; Write-Host \"Body: $\\($r.Content\\)\" } catch { Write-Host \"Status: $\\($_.Exception.Response.StatusCode\\)\"; Write-Host \"Error: $\\($_.ErrorDetails.Message\\)\" })"
+    ]
+  }
+}
